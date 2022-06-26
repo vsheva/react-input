@@ -8,7 +8,6 @@
 - React Hooks
 - JavaScript (ES6)
 - CSS modules
-- BEM metodology
 - HTML5
 
 
