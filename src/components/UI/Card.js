@@ -7,3 +7,6 @@ const Card = props => {
 };
 
 export default Card;
+
+//className from props (выше)
+//classes.card  (из css модулей)
