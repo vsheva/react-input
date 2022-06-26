@@ -1,18 +1,18 @@
-import React, {useState}  from 'react';
+import React, { useState } from 'react';
 import AddUser from './components/Users/AddUser.js';
-import UsersList from "./components/Users/UsersList";
+import UsersList from './components/Users/UsersList';
 
 function App() {
-const[usersList, setUsersList]= useState([])
-    const addUserHandler=(uName, uAge)=>{
-    return setUsersList((prev)=> {
-        return [...prev, {name: uName, age: uAge, id: Math.random().toString()}]
-    })
-    }
+  const [usersList, setUsersList] = useState([]);
+  const addUserHandler = (uName, uAge) => {
+    return setUsersList(prev => {
+      return [...prev, { name: uName, age: uAge, id: Math.random().toString() }];
+    });
+  };
 
   return (
     <div>
-      <AddUser onAddUser={addUserHandler}/>
+      <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
     </div>
   );
@@ -20,14 +20,11 @@ const[usersList, setUsersList]= useState([])
 
 export default App;
 
-
 // передаем enteredName, enteredAge вверх, как - через вызов
 // функции, принимая их как аргументы
 //         ---вверху создаем обработчик, который принимает 2 параметра
 //         --- передаем через пропс обработчик
 //         ---вызываем, подставляя наши состояния как аргументы обработчика
-
-
 
 /**
  #96
